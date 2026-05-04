@@ -1,0 +1,53 @@
+Existing content:
+
+    static PizzaService()
+    {
+        Pizzas = new List<Pizza>
+        {
+            new Pizza {Id = 1, Name = "Classic Italian", IsGlutenFree = false},
+            new Pizza {Id = 2, Name = "Veggie", IsGlutenFree = true},
+        };
+    }
+
+My additional record:
+
+    static PizzaService()
+    {
+        Pizzas = new List<Pizza>
+        {
+            new Pizza {Id = 1, Name = "Classic Italian", IsGlutenFree = false},
+            new Pizza {Id = 2, Name = "Veggie", IsGlutenFree = true},
+            new Pizza {Id = 3, Name = "Hawaian", IsGlutenFree = false},
+        };
+    }
+
+
+
+Response to the GET all request:
+
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Mon, 04 May 2026 21:04:23 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Hawaian",
+    "isGlutenFree": false
+  }
+]
+
+
